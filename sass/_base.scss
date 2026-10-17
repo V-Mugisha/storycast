@@ -58,7 +58,7 @@
 
 @layer utilities {
   .container {
-    width: min(100% - (t.$space-md * 2), 1100px);
+    width: min(100% - (t.$space-md * 2), t.$container-max);
     margin-inline: auto;
   }
 
