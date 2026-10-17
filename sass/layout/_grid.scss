@@ -74,6 +74,15 @@
       margin: 0 0 t.$space-md;
     }
 
+    ul {
+      margin: 0 0 t.$space-md;
+      padding-left: t.$space-lg;
+    }
+
+    li {
+      margin-bottom: t.$space-sm;
+    }
+
     section img {
       width: 100%;
       margin-block: t.$space-md;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About &amp; Accessibility | StoryCast</title>
+    <meta name="description" content="Learn about StoryCast, the accessibility features built into the site, and how to engage with its stories.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav" aria-label="Primary">
+                <a class="site-nav__brand" href="index.html">StoryCast</a>
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="story/noah-and-the-ark.html">Story</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="about.html" aria-current="page">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <article class="story-layout">
+            <h1>About &amp; Accessibility</h1>
+            <p class="story-layout__lede">StoryCast is a small library of stories told in sound, image, and voice.
+                Here is who we are, how we make stories reachable, and how you can take part.</p>
+
+            <section>
+                <h2>Our mission</h2>
+                <p>StoryCast is a small library of stories told in sound, image, and voice. Our first story is Noah
+                    and the Ark, retold in our own words with the old verses close at hand. We believe a story is only
+                    truly told when everyone can reach it, so accessibility is built into the site from the start, not
+                    added at the end.</p>
+            </section>
+
+            <section>
+                <h2>Accessibility features</h2>
+                <ul>
+                    <li>Captions on every video, provided through the captions track.</li>
+                    <li>A full, visible transcript for every audio and video story.</li>
+                    <li>Semantic landmarks: header, main, article, section, aside, and footer.</li>
+                    <li>A clear heading hierarchy with a single h1 on each page.</li>
+                    <li>A skip-to-content link and fully keyboard operable navigation.</li>
+                    <li>Visible focus indicators on all links and buttons.</li>
+                    <li>Text and interface colors that meet WCAG 2.1 AA contrast.</li>
+                    <li>Respect for the prefers-reduced-motion setting.</li>
+                    <li>Descriptive alt text on images, with decorative images marked as empty.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>How to engage</h2>
+                <p>There are a few ways to take part in a story.</p>
+                <ul>
+                    <li>Watch: play the video and turn captions on with the controls.</li>
+                    <li>Listen: play the audio and read along with the transcript.</li>
+                    <li>Read: the full text of every story lives in its transcript section.</li>
+                    <li>Contribute: have a story to suggest or an issue to report? Write to us at <a
+                            href="mailto:m.victor@alustudent.com">m.victor@alustudent.com</a>.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="site-footer__brand">StoryCast</p>
+            <nav class="site-footer__nav" aria-label="Footer">
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="index.html">Home</a></li>
+                    <li><a class="site-footer__link" href="story/noah-and-the-ark.html">Story</a></li>
+                    <li><a class="site-footer__link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__note">Stories in sound and vision, accessible to everyone.</p>
+            <p class="site-footer__cta">Any story you may want us to cover, or any issue to report? <a
+                    class="site-footer__link" href="mailto:m.victor@alustudent.com">m.victor@alustudent.com</a></p>
+            <p class="site-footer__copyright">© 2026 StoryCast</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js" defer></script>
+</body>
+
+</html>
