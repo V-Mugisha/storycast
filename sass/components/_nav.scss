@@ -51,4 +51,39 @@
       justify-content: space-between;
     }
   }
+
+  .breadcrumb {
+    max-width: t.$measure;
+    margin-inline: auto;
+    padding: t.$space-md;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: t.$space-sm;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item {
+      font-size: t.$font-size-sm;
+      color: t.$color-text-muted;
+
+      a {
+        color: t.$color-primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      & + &::before {
+        content: "/";
+        margin-right: t.$space-sm;
+        color: t.$color-border;
+      }
+    }
+  }
 }
