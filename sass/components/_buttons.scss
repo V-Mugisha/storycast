@@ -1,0 +1,25 @@
+@use "../tokens" as t;
+
+@layer components {
+  .btn {
+    display: inline-block;
+    padding: t.$space-sm t.$space-lg;
+    border: none;
+    border-radius: t.$radius-sm;
+    font: inherit;
+    font-weight: t.$weight-medium;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &--primary {
+      background: t.$color-primary;
+      color: t.$color-white;
+
+      &:hover {
+        background: t.$color-primary-dark;
+      }
+    }
+  }
+}

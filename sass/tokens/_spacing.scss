@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $space-xs: 0.25rem;
 $space-sm: 0.5rem;
 $space-md: 1rem;
@@ -16,7 +18,7 @@ $breakpoints: (
 
 // Mobile-first media query helper: @include respond("md") { ... }
 @mixin respond($bp) {
-  @media (min-width: map-get($breakpoints, $bp)) {
+  @media (min-width: map.get($breakpoints, $bp)) {
     @content;
   }
 }

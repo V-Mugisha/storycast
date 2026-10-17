@@ -1,0 +1,88 @@
+@use "../tokens" as t;
+
+$story-card-wide: 28rem;
+
+@layer components {
+  .story-card {
+    container-type: inline-size;
+    container-name: story-card;
+    display: flex;
+    flex-direction: column;
+    background: t.$color-bg;
+    border: 1px solid t.$color-border;
+    border-radius: t.$radius-md;
+    overflow: hidden;
+
+    &__media {
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: t.$space-sm;
+      padding: t.$space-md;
+    }
+
+    &__tag {
+      font-size: t.$font-size-sm;
+      font-weight: t.$weight-medium;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: t.$color-primary;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: t.$font-size-lg;
+      line-height: t.$line-height-tight;
+
+      a {
+        color: t.$color-text;
+        text-decoration: none;
+
+        &:hover {
+          color: t.$color-primary;
+        }
+      }
+    }
+
+    &__excerpt {
+      margin: 0;
+      color: t.$color-text-muted;
+    }
+
+    &--teaser {
+      background: t.$color-bg-alt;
+      border-style: dashed;
+
+      .story-card__tag {
+        color: t.$color-text-muted;
+      }
+    }
+  }
+
+  @container story-card (min-width: #{$story-card-wide}) {
+    .story-card {
+      flex-direction: row;
+
+      &__media {
+        flex: 0 0 40%;
+        align-self: stretch;
+        aspect-ratio: auto;
+      }
+
+      &__body {
+        flex: 1;
+      }
+    }
+  }
+}

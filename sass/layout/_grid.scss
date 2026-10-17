@@ -1,0 +1,49 @@
+@use "../tokens" as t;
+
+@layer components {
+  .hero {
+    padding: t.$space-xl 0;
+    text-align: center;
+    background: t.$color-bg-alt;
+
+    h1 {
+      margin: 0 0 t.$space-md;
+    }
+
+    &__eyebrow {
+      margin: 0 0 t.$space-sm;
+      font-size: t.$font-size-sm;
+      font-weight: t.$weight-medium;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: t.$color-primary;
+    }
+
+    &__lede {
+      max-width: 60ch;
+      margin: 0 auto t.$space-lg;
+      color: t.$color-text-muted;
+    }
+  }
+
+  .featured {
+    padding: t.$space-xl 0;
+
+    h2 {
+      margin: 0 0 t.$space-lg;
+    }
+  }
+
+  .stories-grid {
+    display: grid;
+    gap: t.$space-lg;
+
+    @include t.respond("md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include t.respond("lg") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
