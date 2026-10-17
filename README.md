@@ -64,21 +64,33 @@ storycast/
 
 ## Running locally
 
-Prerequisites: Node.js and npm.
+### Prerequisites
 
-1. Install dependencies:
+- Git, to clone the repository.
+- Node.js and npm, to install dependencies and run the build scripts (npm is bundled with Node).
+
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/V-Mugisha/storycast.git
+   cd storycast
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Develop (watch Sass and serve with browser-sync):
+3. Develop (watch Sass and serve with browser-sync):
 
    ```bash
    npm run dev
    ```
 
-3. Build the CSS once (compressed, no source map):
+   Or build the CSS once (compressed, no source map):
 
    ```bash
    npm run build
