@@ -1,0 +1,96 @@
+@use "../tokens" as t;
+
+@layer components {
+  .about-card {
+    &__head {
+      display: flex;
+      align-items: center;
+      gap: t.$space-sm;
+      margin-bottom: t.$space-md;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: t.$radius-sm;
+      background: t.$color-tint;
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__intro {
+      margin: 0 0 t.$space-md;
+      color: t.$color-text-muted;
+    }
+  }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-sm;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .feature {
+    position: relative;
+    padding: t.$space-sm t.$space-md t.$space-sm t.$space-lg;
+    background: t.$color-tint;
+    border-radius: t.$radius-sm;
+    color: t.$color-text;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: t.$space-md;
+      top: t.$space-md;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: t.$color-primary;
+    }
+  }
+
+  .engage-list {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-md;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .engage {
+    display: flex;
+    align-items: flex-start;
+    gap: t.$space-sm;
+  }
+
+  .engage__icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.15em;
+  }
+
+  .engage__text {
+    color: t.$color-text-muted;
+  }
+
+  .engage__link {
+    color: t.$color-primary;
+    font-weight: t.$weight-bold;
+    text-decoration: underline;
+  }
+}
