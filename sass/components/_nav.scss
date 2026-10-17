@@ -1,0 +1,54 @@
+@use "../tokens" as t;
+
+@layer components {
+  .site-header {
+    background: t.$color-bg;
+    border-bottom: 1px solid t.$color-border;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: t.$space-sm;
+    padding-block: t.$space-md;
+
+    &__brand {
+      font-size: t.$font-size-lg;
+      font-weight: t.$weight-bold;
+      color: t.$color-text;
+      text-decoration: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: t.$space-md;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__link {
+      color: t.$color-text-muted;
+      font-weight: t.$weight-medium;
+      text-decoration: none;
+
+      &:hover {
+        color: t.$color-primary;
+      }
+
+      &[aria-current="page"] {
+        color: t.$color-primary;
+        font-weight: t.$weight-bold;
+        text-decoration: underline;
+      }
+    }
+
+    @include t.respond("md") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
