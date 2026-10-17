@@ -66,11 +66,11 @@
       margin-bottom: t.$space-xl;
     }
 
-    section h2 {
+    section > h2 {
       margin: 0 0 t.$space-md;
     }
 
-    section p {
+    section > p {
       margin: 0 0 t.$space-md;
     }
 
@@ -83,7 +83,7 @@
       margin-bottom: t.$space-sm;
     }
 
-    section img {
+    section > img {
       width: 100%;
       margin-block: t.$space-md;
       border-radius: t.$radius-md;
@@ -115,22 +115,33 @@
   }
 
   .transcript {
-    margin-top: t.$space-xl;
-    padding: t.$space-lg;
-    background: t.$color-bg-alt;
-    border: 1px solid t.$color-border;
-    border-radius: t.$radius-md;
-
-    h2 {
-      margin: 0 0 t.$space-md;
+    &__scroll {
+      max-height: 20rem;
+      overflow-y: auto;
+      padding: t.$space-sm;
+      border: 1px solid t.$color-border;
+      border-radius: t.$radius-md;
+      background: t.$color-bg;
     }
 
-    p {
-      margin: 0 0 t.$space-md;
-    }
+    &__line {
+      margin: 0 0 t.$space-xs;
+      padding: t.$space-xs t.$space-sm;
+      border-left: 3px solid transparent;
+      border-radius: t.$radius-sm;
+      color: t.$color-text-muted;
+      transition: background-color 0.2s ease, color 0.2s ease;
 
-    p:last-child {
-      margin: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.is-active {
+        color: t.$color-text;
+        font-weight: t.$weight-medium;
+        background: t.$color-bg-alt;
+        border-left-color: t.$color-primary;
+      }
     }
   }
 
