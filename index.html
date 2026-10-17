@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    <main class="container">
-        <h1>Hello, Sass</h1>
-        <p>If this is styled, the setup works.</p>
-        <button class="btn btn--primary">Click me</button>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="hero__eyebrow">Audio and video storytelling</p>
+                <h1>Stories that endure</h1>
+                <p class="hero__lede">StoryCast retells the story of Noah and the Ark through sound, image, and voice. A
+                    familiar story, told again for anyone willing to listen.</p>
+                <a class="btn btn--primary" href="story/noah-and-the-ark.html">Listen to the story</a>
+            </div>
+        </section>
+
+        <section class="featured">
+            <div class="container">
+                <h2>Featured stories</h2>
+                <div class="stories-grid">
+                    <article class="story-card">
+                        <a class="story-card__media" href="story/noah-and-the-ark.html" tabindex="-1"
+                            aria-hidden="true">
+                            <img src="images/noah-ark.jpeg" alt="">
+                        </a>
+                        <div class="story-card__body">
+                            <p class="story-card__tag">Video + audio</p>
+                            <h3 class="story-card__title"><a href="story/noah-and-the-ark.html">Noah and the Ark</a>
+                            </h3>
+                            <p class="story-card__excerpt">A flood, a boat, and a promise. Follow Noah from the first
+                                warning to the rainbow.</p>
+                        </div>
+                    </article>
+
+                    <article class="story-card story-card--teaser">
+                        <div class="story-card__body">
+                            <p class="story-card__tag">Coming soon</p>
+                            <h3 class="story-card__title">The Dove Returns</h3>
+                            <p class="story-card__excerpt">The search for dry land after the rain.</p>
+                        </div>
+                    </article>
+
+                    <article class="story-card story-card--teaser">
+                        <div class="story-card__body">
+                            <p class="story-card__tag">Coming soon</p>
+                            <h3 class="story-card__title">The Rainbow Covenant</h3>
+                            <p class="story-card__excerpt">A promise set in the sky.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
     <script src="js/main.js" defer></script>
 </body>
+
 </html>
